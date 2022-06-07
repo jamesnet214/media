@@ -15,11 +15,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Themes\Units\" />
-    <Folder Include="UI\Units\" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <Page Update="Themes\Units\BasicButton.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Themes\Views\WatchContent.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>

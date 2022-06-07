@@ -68,10 +68,15 @@ namespace FocusWatch.Content.Local.ViewModels
             dispatcherTimer.Tick += new EventHandler(TimerTick);
             dispatcherTimer.Interval = new TimeSpan(0, 0, 0, 0, 1);
 
-            StartCommand = new RelayCommand<object>(Start);
-            StopCommand = new RelayCommand<object>(Stop);
-            ResetCommand = new RelayCommand<object>(Reset);
+            StartCommand = new RelayCommand<object>(Start, (o) => !stopWatch.IsRunning);
+            StopCommand = new RelayCommand<object>(Stop, (o) => stopWatch.IsRunning);
+            ResetCommand = new RelayCommand<object>(Reset, (o) => !stopWatch.IsRunning);
             CloseCommand = new RelayCommand<object>(Close);
+
+            Hour = "00";
+            Minute = "00";
+            Second = "00";
+            Millisecond = "00";
         }
 
         private void TimerTick(object? sender, EventArgs e)
