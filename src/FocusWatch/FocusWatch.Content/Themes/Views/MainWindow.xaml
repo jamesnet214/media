@@ -10,7 +10,7 @@
                     <Border Background="{TemplateBinding Background}"
                             BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}">
-                        <ContentPresenter/>
+                        <views:WatchContent/>
                     </Border>
                 </ControlTemplate>
             </Setter.Value>

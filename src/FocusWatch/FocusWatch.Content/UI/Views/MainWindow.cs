@@ -9,10 +9,5 @@ namespace FocusWatch.Content.UI.Views
         {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(MainWindow), new FrameworkPropertyMetadata(typeof(MainWindow)));
         }
-
-        public MainWindow()
-        {
-            Content = new WatchContent();
-        }
     }
 }
